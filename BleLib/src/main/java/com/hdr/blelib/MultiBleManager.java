@@ -94,7 +94,7 @@ public abstract class MultiBleManager<E extends BleManagerCallbacks> {
      *
      * @return the context
      */
-    protected Context getContext() {
+    public Context getContext() {
         return mContext;
     }
 
@@ -104,7 +104,7 @@ public abstract class MultiBleManager<E extends BleManagerCallbacks> {
      *
      * @return the gatt callback object
      */
-    protected abstract BleManagerGattCallback getGattCallback();
+    public abstract BleManagerGattCallback getGattCallback();
 
     /**
      * Returns whether to directly connect to the remote device (false) or to automatically connect as soon as the remote
@@ -317,6 +317,7 @@ public abstract class MultiBleManager<E extends BleManagerCallbacks> {
 
     public abstract class BleManagerGattCallback extends BluetoothGattCallback {
         private Map<String, Queue<Request>> mQueueMap = new HashMap<>();
+        private Map<String, Request> mCurrentRequest = new HashMap<>();
         private boolean mInitInProgress;
 
         /**
@@ -441,8 +442,6 @@ public abstract class MultiBleManager<E extends BleManagerCallbacks> {
 
                     mInitInProgress = true;
 
-                    // Obtain the queue of initialization requests
-                    nextRequest(address);
                 } else {
                     mCallbacks.onDeviceNotSupported(address);
                     disconnect(address);
@@ -517,6 +516,10 @@ public abstract class MultiBleManager<E extends BleManagerCallbacks> {
                 return;
             }
             queue.add(request);
+            Request cur = mCurrentRequest.get(address);
+            if (cur == null) {
+                nextRequest(address);
+            }
         }
 
         /**
@@ -532,7 +535,7 @@ public abstract class MultiBleManager<E extends BleManagerCallbacks> {
 
                     // Get the first request from the queue
                     final Request request = requests != null && !requests.isEmpty() ? requests.poll() : null;
-
+                    mCurrentRequest.put(address,request);
                     // Are we done?
                     if (request == null) {
                         if (mInitInProgress) {

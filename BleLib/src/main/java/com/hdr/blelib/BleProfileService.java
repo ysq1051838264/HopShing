@@ -166,10 +166,16 @@ public abstract class BleProfileService extends Service implements BleManagerCal
 
     @Override
     public void onDeviceConnected(String address) {
+        final Intent broadcast = new Intent(BROADCAST_CONNECTION_STATE);
+        broadcast.putExtra(EXTRA_CONNECTION_STATE, STATE_CONNECTED);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(broadcast);
     }
 
     @Override
     public void onDeviceDisconnecting(String address) {
+        final Intent broadcast = new Intent(BROADCAST_CONNECTION_STATE);
+        broadcast.putExtra(EXTRA_CONNECTION_STATE, STATE_CONNECTING);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(broadcast);
     }
 
     /**
