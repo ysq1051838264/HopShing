@@ -9,10 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.hdr.blelib.BleManagerCallbacks;
-import com.hdr.blelib.BleProfileService;
-import com.hdr.wristband.BlePresenter;
-import com.hdr.wristband.model.BleDevice;
+import com.example.hopshing.util.BleDevice;
+import com.example.hopshing.util.BlePresenter;
 
 import org.jetbrains.annotations.NotNull;
 

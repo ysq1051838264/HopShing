@@ -1,0 +1,18 @@
+package com.example.hopshing.util
+
+/**
+ * Created by hdr on 16/7/4.
+ */
+object StringUtils {
+    fun format(bytes: ByteArray):String {
+        val sb = StringBuilder()
+        bytes.forEach {
+            sb.append(String.format("%02X ", it))
+        }
+        return sb.toString()
+    }
+
+    fun isEmpty(str: String?): Boolean {
+        return str == null || str.isEmpty() || str.trim { it <= ' ' } == ""
+    }
+}

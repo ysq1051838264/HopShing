@@ -1,4 +1,4 @@
-package com.hdr.wristband.model
+package com.example.hopshing.util
 
 import android.bluetooth.BluetoothDevice
 

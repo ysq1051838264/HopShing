@@ -1,4 +1,4 @@
-package com.hdr.wristband.ble
+package com.example.hopshing.util
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
@@ -8,11 +8,8 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import com.hdr.blelib.BleProfileService
+import com.hdr.wristband.ble.WristDecoder
 import com.hdr.wristband.utils.BleConst
-import com.hdr.wristband.utils.StringUtils
-import com.hdr.wristband.xrz.XrzWristDecoder
-import com.uamother.bluetooth.other.SpHelper
-import com.uamother.bluetooth.utils.Constants
 import java.util.*
 
 /**
@@ -61,7 +58,7 @@ class WristBleService : BleProfileService(), WristBleManager.WristBleCallback {
     }
 
     fun doConnect() {
-        if (!StringUtils.isEmpty(currentAddress)) {
+        if (currentAddress != null) {
             val device = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(currentAddress)
             wristBleManager.connect(device)
         }

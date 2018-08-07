@@ -1,4 +1,4 @@
-package com.hdr.wristband
+package com.example.hopshing.util
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
@@ -8,18 +8,9 @@ import android.os.IBinder
 import android.os.ParcelUuid
 import android.util.Log
 import android.widget.Toast
-import com.example.hopshing.util.Constants
-import com.example.hopshing.util.SpHelper
 import com.hdr.blelib.utils.BleUtils
-import com.hdr.wristband.ble.BleSubscriber
-import com.hdr.wristband.ble.WristBleService
-import com.hdr.wristband.model.BleDevice
 import com.hdr.wristband.utils.BleConst
-import com.uamother.bluetooth.other.SpHelper
-import com.uamother.bluetooth.utils.Constants
 import no.nordicsemi.android.support.v18.scanner.*
-import org.jetbrains.anko.toast
-import rx.Observable
 import java.util.*
 
 /**
