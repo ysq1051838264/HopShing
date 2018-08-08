@@ -13,9 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Description：
- * Author: Hansion
- * Time: 2017/2/13 11:23
+ * Created by yangshuquan on 2018/8/4.
  */
 public class DeviceListAdapter extends BaseAdapter {
 

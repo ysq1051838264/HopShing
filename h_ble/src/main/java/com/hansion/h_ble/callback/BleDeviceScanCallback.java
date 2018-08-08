@@ -4,9 +4,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 
 /**
- * Description： ble蓝牙设备扫描回调
- * Author: Hansion
- * Time: 2016/10/11 12:21
+ * Created by yangshuquan on 2018/8/4.
  */
 public class BleDeviceScanCallback implements BluetoothAdapter.LeScanCallback {
     private ScanCallback mScanCallback;

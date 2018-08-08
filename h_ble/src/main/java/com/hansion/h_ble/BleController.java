@@ -30,9 +30,7 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * Description：
- * Author: Hansion  www.hansion.win
- * Time: 2017/2/13 9:43
+ * Created by yangshuquan on 2018/8/6.
  */
 public class BleController {
 

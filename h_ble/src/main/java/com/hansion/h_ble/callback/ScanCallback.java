@@ -3,9 +3,7 @@ package com.hansion.h_ble.callback;
 import android.bluetooth.BluetoothDevice;
 
 /**
- * Description：
- * Author: Hansion
- * Time: 2016/10/11 12:11
+ * Created by yangshuquan on 2018/8/4.
  */
 public interface ScanCallback {
     /**
