@@ -1,4 +1,4 @@
-package com.hansion.hble.sample.adapter;
+package com.example.hopshing.adapter;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.hansion.hble.R;
+import com.example.hopshing.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class DeviceListAdapter extends BaseAdapter {
     private List<BluetoothDevice> bluetoothDevices = new ArrayList<BluetoothDevice>();
     private Context mContext;
 
-    public DeviceListAdapter(Context context,List<BluetoothDevice> bluetoothDevices) {
+    public DeviceListAdapter(Context context, List<BluetoothDevice> bluetoothDevices) {
         mContext = context;
         this.bluetoothDevices = bluetoothDevices;
     }

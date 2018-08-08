@@ -1,4 +1,4 @@
-package com.hansion.hble.sample;
+package com.example.hopshing;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.hansion.h_ble.BleController;
 import com.hansion.h_ble.callback.OnReceiverCallback;
 import com.hansion.h_ble.callback.OnWriteCallback;
-import com.hansion.hble.R;
 
 public class SendAndReciveActivity extends AppCompatActivity implements View.OnClickListener {
 

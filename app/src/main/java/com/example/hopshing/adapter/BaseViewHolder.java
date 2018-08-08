@@ -1,4 +1,4 @@
-package com.hansion.hble.sample.adapter;
+package com.example.hopshing.adapter;
 
 import android.content.Context;
 import android.util.SparseArray;
