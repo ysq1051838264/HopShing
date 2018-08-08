@@ -7,14 +7,13 @@ repositories {
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '27.0.3'
+
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS
 
     defaultConfig {
-        minSdkVersion 18
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
     }
 
     compileOptions {
@@ -29,7 +28,7 @@ android {
     }
 
     dependencies {
-        compile 'com.android.support:support-v4:23.0.0'
+        compile 'no.nordicsemi.android:log:2.0.0'
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -42,5 +41,5 @@ buildscript {
 
 }
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "com.android.support:support-v4:$ANDROID_SUPPORT_VERSION"
 }
