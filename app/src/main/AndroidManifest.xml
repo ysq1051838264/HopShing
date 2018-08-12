@@ -24,6 +24,8 @@
         </activity>
 
         <activity android:name=".operation.OperationActivity"/>
+
+        <activity android:name=".SendActivity"/>
     </application>
 
 </manifest>

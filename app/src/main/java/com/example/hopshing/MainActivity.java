@@ -164,6 +164,10 @@ public class MainActivity  extends AppCompatActivity implements View.OnClickList
                     Intent intent = new Intent(MainActivity.this, OperationActivity.class);
                     intent.putExtra(OperationActivity.KEY_DATA, bleDevice);
                     startActivity(intent);
+
+//                    Intent intent = new Intent(MainActivity.this, SendActivity.class);
+//                    intent.putExtra(SendActivity.KEY_DATA, bleDevice);
+//                    startActivity(intent);
                 }
             }
         });
